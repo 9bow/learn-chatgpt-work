@@ -16,7 +16,7 @@
     "mermaid": "^11.16.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "sharp": "^0.34.5"
+    "sharp": "^0.35.3"
   },
   "devDependencies": {
     "@types/node": "^26.1.2",
@@ -24,7 +24,10 @@
     "@types/react-dom": "^19.2.4"
   },
   "pnpm": {
-    "onlyBuiltDependencies": ["esbuild", "sharp"],
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp"
+    ],
     "overrides": {
       "picomatch": ">=4.0.4",
       "smol-toml": ">=1.6.1"
