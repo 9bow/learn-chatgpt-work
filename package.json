@@ -30,7 +30,8 @@
     ],
     "overrides": {
       "picomatch": ">=4.0.4",
-      "smol-toml": ">=1.6.1"
+      "smol-toml": ">=1.6.1",
+      "sharp": ">=0.35.0"
     }
   }
 }
