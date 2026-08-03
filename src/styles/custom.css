@@ -1,0 +1,193 @@
+:root {
+  --sl-font: 'Pretendard Variable', 'Pretendard', -apple-system,
+    BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI',
+    'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  --sl-font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+  --sl-content-width: 60rem;
+}
+@media (min-width: 100rem) {
+  :root {
+    --sl-content-width: 72rem;
+  }
+}
+
+/* Splash hero: 한국어 타이틀 overflow/줄바꿈 방지 */
+.hero h1 {
+  font-size: clamp(2rem, 6vw, 4.5rem);
+  line-height: 1.1;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.hero .tagline {
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  line-height: 1.6;
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.hero {
+  padding-block: 2rem;
+}
+@media (min-width: 50rem) {
+  .hero {
+    padding-block: 3rem;
+  }
+}
+
+/* 한국어 본문 가독성 */
+.sl-markdown-content p,
+.sl-markdown-content li {
+  word-break: keep-all;
+  overflow-wrap: break-word;
+}
+.sl-markdown-content h2,
+.sl-markdown-content h3,
+.sl-markdown-content h4 {
+  word-break: keep-all;
+}
+
+/* 반응형 테이블 */
+.sl-markdown-content table {
+  display: block;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* ASCII 다이어그램 코드 블록 가독성 */
+.sl-markdown-content pre.ascii-diagram,
+.sl-markdown-content pre.ascii {
+  font-size: 0.85em;
+  line-height: 1.4;
+  background: var(--sl-color-gray-7);
+  border: 1px solid var(--sl-color-gray-5);
+}
+
+/* 펼침 개념 카드 */
+.concept-card {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.5rem;
+  padding: 1rem;
+  margin: 1rem 0;
+  background: var(--sl-color-gray-7);
+}
+.concept-card summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--sl-color-white);
+}
+.concept-card[open] summary {
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--sl-color-gray-5);
+  padding-bottom: 0.5rem;
+}
+
+/* Quiz 컴포넌트 */
+.quiz-root {
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  margin: 2rem 0;
+  background: var(--sl-color-gray-7);
+}
+.quiz-root h3 {
+  margin-top: 0;
+}
+.quiz-question {
+  border-top: 1px solid var(--sl-color-gray-5);
+  padding-top: 1rem;
+  margin-top: 1rem;
+}
+.quiz-question:first-of-type {
+  border-top: none;
+}
+.quiz-option {
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--sl-color-gray-5);
+  border-radius: 0.4rem;
+  padding: 0.55rem 0.8rem;
+  margin: 0.35rem 0;
+  background: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  cursor: pointer;
+  font: inherit;
+  line-height: 1.5;
+}
+.quiz-option:hover:not(:disabled) {
+  border-color: var(--sl-color-accent);
+}
+.quiz-option:disabled {
+  cursor: default;
+}
+.quiz-option[data-state='correct'] {
+  border-color: #16a34a;
+  background: rgba(22, 163, 74, 0.12);
+}
+.quiz-option[data-state='wrong'] {
+  border-color: #dc2626;
+  background: rgba(220, 38, 38, 0.12);
+}
+.quiz-explanation {
+  margin-top: 0.5rem;
+  padding: 0.6rem 0.8rem;
+  border-left: 3px solid var(--sl-color-accent);
+  background: var(--sl-color-bg);
+  font-size: 0.95em;
+}
+.quiz-explanation code {
+  font-size: 0.9em;
+}
+.quiz-score {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--sl-color-gray-5);
+  font-weight: 600;
+}
+.quiz-reset {
+  margin-left: 0.75rem;
+  font: inherit;
+  font-size: 0.9em;
+  padding: 0.3rem 0.7rem;
+  border-radius: 0.4rem;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-bg);
+  color: var(--sl-color-text);
+  cursor: pointer;
+}
+
+/* 공식 문서 스크린샷 */
+.doc-figure {
+  margin: 1.75rem 0;
+}
+.doc-figure .doc-image {
+  width: 100%;
+  height: auto;
+  border-radius: 0.6rem;
+  border: 1px solid var(--sl-color-gray-5);
+  background: var(--sl-color-gray-7);
+}
+.doc-figure figcaption {
+  margin-top: 0.55rem;
+  font-size: 0.88em;
+  line-height: 1.5;
+  color: var(--sl-color-gray-3);
+  word-break: keep-all;
+}
+:root[data-theme='light'] .doc-image-dark {
+  display: none;
+}
+:root[data-theme='dark'] .doc-image-light {
+  display: none;
+}
+
+/* 참고 자료 목록 */
+.references-list {
+  font-size: 0.95em;
+}
+.references-list li {
+  margin-bottom: 0.35rem;
+}
+.references-accessed {
+  color: var(--sl-color-gray-3);
+  font-size: 0.9em;
+}

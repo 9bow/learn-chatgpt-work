@@ -1,0 +1,33 @@
+{
+  "name": "learn-chatgpt-work",
+  "type": "module",
+  "version": "0.1.0",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/react": "^6.0.2",
+    "@astrojs/starlight": "^0.41.6",
+    "astro": "^7.0.2",
+    "mermaid": "^11.16.0",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "sharp": "^0.34.5"
+  },
+  "devDependencies": {
+    "@types/node": "^26.1.2",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": ["esbuild", "sharp"],
+    "overrides": {
+      "picomatch": ">=4.0.4",
+      "smol-toml": ">=1.6.1"
+    }
+  }
+}

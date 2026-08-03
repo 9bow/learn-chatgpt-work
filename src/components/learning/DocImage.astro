@@ -1,0 +1,56 @@
+---
+/**
+ * 공식 문서 스크린샷을 출처와 함께 표시한다.
+ * light/dark 두 장을 넘기면 사이트 테마에 맞춰 자동으로 전환된다.
+ */
+interface Props {
+  light: string;
+  dark?: string;
+  alt: string;
+  caption?: string;
+  source?: string;
+  sourceLabel?: string;
+}
+
+const { light, dark, alt, caption, source, sourceLabel = 'OpenAI 공식 문서' } =
+  Astro.props;
+
+const base = import.meta.env.BASE_URL.replace(/\/$/, '');
+const hasPair = Boolean(dark);
+---
+
+<figure class="doc-figure">
+  <img
+    src={`${base}${light}`}
+    alt={alt}
+    loading="lazy"
+    decoding="async"
+    class={hasPair ? 'doc-image doc-image-light' : 'doc-image'}
+  />
+  {
+    dark && (
+      <img
+        src={`${base}${dark}`}
+        alt={alt}
+        loading="lazy"
+        decoding="async"
+        class="doc-image doc-image-dark"
+      />
+    )
+  }
+  {
+    (caption || source) && (
+      <figcaption>
+        {caption}
+        {source && (
+          <>
+            {caption ? ' · ' : ''}
+            <a href={source} target="_blank" rel="noopener noreferrer">
+              출처: {sourceLabel}
+            </a>
+          </>
+        )}
+      </figcaption>
+    )
+  }
+</figure>
