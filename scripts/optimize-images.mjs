@@ -1,12 +1,16 @@
 /**
- * public/images/official 아래의 큰 스크린샷을 폭 1600px / WebP q82로 줄인다.
+ * public/images 아래의 큰 이미지 자산을 폭 1600px / WebP q82로 줄인다.
  * 사용법: node scripts/optimize-images.mjs
  */
 import sharp from 'sharp';
 import { readdir, stat, rename, unlink } from 'node:fs/promises';
 import path from 'node:path';
 
-const TARGETS = ['public/images/official/app', 'public/images/official/openai'];
+const TARGETS = [
+  'public/images/official/app',
+  'public/images/official/openai',
+  'public/images/generated',
+];
 const MAX_WIDTH = 1600;
 const SIZE_THRESHOLD = 300_000;
 

@@ -51,7 +51,7 @@ Node 22 이상, pnpm 10 이상을 권장합니다.
 ├── docs/                      # 작성 가이드·이미지 인벤토리 (사이트에 게시되지 않음)
 ├── public/
 │   ├── data/quiz/             # 섹션별 퀴즈 JSON
-│   └── images/official/       # 공식 문서·발표 페이지 인용 이미지
+│   └── images/                # 공식 문서·발표 인용 이미지와 생성 교육용 도해
 ├── scripts/optimize-images.mjs
 ├── src/
 │   ├── components/learning/   # Quiz, ConceptCard, References, Mermaid, DocImage
@@ -66,7 +66,7 @@ Node 22 이상, pnpm 10 이상을 권장합니다.
   OpenAI Academy에서 확인한 내용이며 챕터마다 참고 링크를 남깁니다.
 - **검증 불가능한 수치를 쓰지 않습니다.** "생산성 N배" 같은 표현 대신 기능의 동작 방식을 씁니다.
 - **영문 용어는 원어를 병기합니다.** 예: 예약 작업(scheduled tasks), 플러그인(plugins).
-- 모든 챕터에 시각 자료(공식 스크린샷 또는 ASCII 다이어그램·비교표)를 넣습니다.
+- 모든 챕터에 시각 자료(공식 스크린샷, 생성 교육용 도해 또는 비교표)를 넣습니다.
 - 작성 규칙 전문은 [`docs/authoring-guide.md`](docs/authoring-guide.md)에 있습니다.
 
 ## 라이선스와 출처

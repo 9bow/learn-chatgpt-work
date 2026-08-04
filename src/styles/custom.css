@@ -30,6 +30,14 @@
 @media (min-width: 50rem) {
   .hero {
     padding-block: 3rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  /* Starlight의 splash copy 컬럼을 전체 폭으로 확장한다.
+     넓은 화면에서 한국어 제목과 소개 문장이 불필요하게 줄바꿈되지 않는다. */
+  .hero .copy {
+    width: 100%;
+    max-width: none;
   }
 }
 
@@ -50,15 +58,6 @@
   display: block;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-}
-
-/* ASCII 다이어그램 코드 블록 가독성 */
-.sl-markdown-content pre.ascii-diagram,
-.sl-markdown-content pre.ascii {
-  font-size: 0.85em;
-  line-height: 1.4;
-  background: var(--sl-color-gray-7);
-  border: 1px solid var(--sl-color-gray-5);
 }
 
 /* 펼침 개념 카드 */

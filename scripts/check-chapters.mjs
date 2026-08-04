@@ -223,7 +223,10 @@ for (const section of sectionDirs) {
         if (!(await exists(imgPath))) addProblem(rel, `이미지 없음: ${match[1]}`);
       }
       if (!/alt="/.test(tag)) addProblem(rel, 'DocImage에 alt가 없습니다');
-      if (!/source="/.test(tag)) addWarning(rel, 'DocImage에 source(출처)가 없습니다');
+      const isGeneratedDiagram = /light="\/images\/generated\//.test(tag);
+      if (!/source="/.test(tag) && !isGeneratedDiagram) {
+        addWarning(rel, 'DocImage에 source(출처)가 없습니다');
+      }
     }
 
     // 프롬프트 예시

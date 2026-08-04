@@ -79,10 +79,28 @@ OpenAI Academy 커버 아트(추상 일러스트, 섹션 도입 장식용으로�
 `academy-research.webp`, `academy-image-creation.webp`
 (출처: `https://openai.com/academy/<해당 주제>/`)
 
+## C. 생성 교육용 도해
+
+`public/images/generated/`의 아래 이미지는 `imagegen`으로 만든 텍스트 없는 교육용 도해다.
+OpenAI 제품 화면을 재현하지 않으며, 정확한 기능 설명은 해당 챕터의 공식 출처와 본문으로
+제공한다. `DocImage`의 `caption`에는 **AI 생성 교육용 도해**임을 밝힌다.
+
+| 파일 | 표현하는 관계 | 사용 섹션 |
+|---|---|---|
+| `generated/work-lifecycle.webp` | 목표 설정 → 자료·승인 도구 → 실행 → 사람 검토 | 01 |
+| `generated/deliverable-review.webp` | 자료 → 초안 → 부분 검토 → 개선된 결과물 | 02 |
+| `generated/agent-steering.webp` | 계획·개입·승인·검토가 있는 사람과 에이전트의 협업 | 03 |
+| `generated/context-layers.webp` | 요청·프로젝트·개인화·메모리의 맥락 계층 | 04 |
+| `generated/connected-tools.webp` | 권한 경계를 거친 도구·데이터 연결 | 05 |
+| `generated/automation-cycle.webp` | 스킬·예약·검토로 이루어진 반복 업무 순환 | 06 |
+| `generated/site-release.webp` | 사이트 생성·저장·검토·접근 제어·배포 | 07 |
+| `generated/governance-gate.webp` | 정책·접근 권한·샌드박스·사람 승인 계층 | 08 |
+| `generated/adoption-loop.webp` | 실제 업무·표준화·자동화·검증의 도입 순환 | 09 |
+
 ## 원칙
 
 1. **실제 UI 스크린샷을 우선**한다. 추상 아트는 챕터당 최대 1장.
 2 이미지는 본문을 대체하지 않는다. 이미지 위·아래에 무엇을 보아야 하는지 한두 문장으로 설명한다.
-3. 이미지 1장으로 시각 자료 요건이 충족되더라도, **ASCII 다이어그램이나 비교표를 최소 1개 더** 둔다.
+3. 이미지 1장으로 시각 자료 요건이 충족되더라도, **생성 교육용 도해나 비교표를 최소 1개 더** 둔다.
 4. 스크린샷에는 구버전 UI(예: 모델명 `GPT-5.4`)가 남아 있을 수 있다. 캡션에서 언급이 필요하면
    "문서 캡처 시점의 화면"이라고 밝힌다.
