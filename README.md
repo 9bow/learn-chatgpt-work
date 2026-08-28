@@ -1,7 +1,7 @@
 # learn-chatgpt-work
 
 ChatGPT Work의 최신 기능을 업무와 일상에 적용하는 방법을 다루는 **한국어 학습 사이트**입니다.
-9개 섹션 32개 챕터로 구성되어 있고, Astro 6(Starlight) + React 19로 만들었습니다.
+9개 섹션의 한국어 챕터로 구성되어 있고, Astro 6(Starlight) + React 19로 만들었습니다.
 
 **사이트: https://9bow.github.io/learn-chatgpt-work/**
 
@@ -14,7 +14,7 @@ ChatGPT Work는 2026년 7월 ChatGPT에 정식 도입된 작업 모드입니다.
 이 사이트는 그 기능들을 **비개발자 직장인 관점**에서 정리합니다. 각 챕터는 개념 설명,
 공식 문서 화면, 복사해 쓸 수 있는 한국어 프롬프트 예시, 주의점으로 구성됩니다.
 
-기준 시점은 **2026년 8월 초**입니다. 기능은 플랜·플랫폼·지역·워크스페이스 설정·롤아웃에
+기준 시점은 **2026년 8월 28일**입니다. 기능은 플랜·플랫폼·지역·워크스페이스 설정·롤아웃에
 따라 다르게 보일 수 있으므로, 각 챕터 하단의 공식 문서 링크에서 최신 상태를 확인하세요.
 
 ## 커리큘럼
@@ -24,7 +24,7 @@ ChatGPT Work는 2026년 7월 ChatGPT에 정식 도입된 작업 모드입니다.
 | 01. ChatGPT Work 입문 | Chat·Work·Codex의 차이, 플랜과 플랫폼, 로컬/클라우드, 첫 세 가지 작업, GPT-5.6 모델 계열 |
 | 02. 결과물 만들기 | 문서·발표자료·스프레드시트, 파일 다루기, 이미지와 Appshot, 시각화와 데이터 분석 |
 | 03. 에이전트와 함께 일하기 | Plan 모드, 개입·대기열·승인, 장시간 작업과 Goal 모드, 서브에이전트 |
-| 04. 프롬프팅과 컨텍스트 | Work 프롬프팅, 커스텀 지침·메모리·Chronicle, 프로젝트 |
+| 04. 프롬프팅과 컨텍스트 | Work 프롬프팅, 커스텀 지침·메모리·Computer History, 프로젝트 |
 | 05. 도구·데이터 연결 | 플러그인과 커넥터, 웹 검색과 리서치, 내장 브라우저·Chrome 확장, Computer Use |
 | 06. 반복 업무 자동화 | 스킬(SKILL.md), 스킬 만들기·Record & Replay, 예약 작업, 워크스페이스 에이전트 |
 | 07. Sites로 공유하기 | 내부 도구·대시보드 만들기, 배포·접근 관리·최신화 |
@@ -55,7 +55,7 @@ Node 22 이상, pnpm 10 이상을 권장합니다.
 ├── scripts/optimize-images.mjs
 ├── src/
 │   ├── components/learning/   # Quiz, ConceptCard, References, Mermaid, DocImage
-│   ├── content/docs/          # 9개 섹션 32개 챕터 (MDX)
+│   ├── content/docs/          # 9개 섹션 학습 챕터 (MDX)
 │   └── styles/custom.css
 └── astro.config.mjs           # 사이드바·GA4·base path 설정
 ```

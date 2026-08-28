@@ -90,10 +90,10 @@ references:
   `visualizations`, `automations`, `long-running-work`, `notifications`, `browser`,
   `computer-use`, `features/voice`, `plugins`, `web-search`, `image-generation`, `image-inputs`,
   `appshots`, `chrome-extension`, `artifacts-viewer`, `reference/slash-commands`,
-  `customization/memories`, `customization/chronicle`, `agent-configuration/subagents`,
+  `customization/memories`, `customization/computer-history`, `agent-configuration/subagents`,
   `build-skills`, `extend/mcp`, `enterprise/work-admin-faq`, `enterprise/governance`,
   `enterprise/apps-and-connectors`, `features/codex-micro`, `extend/record-and-replay`,
-  `remote-connections`, `changelog`
+  `remote-connections`, `webmcp`, `import`, `changelog`
 - `https://openai.com/chatgpt-work/`
 - `https://openai.com/business/`, `https://openai.com/business/pricing`,
   `https://openai.com/business/apps/`, `https://openai.com/business/workspace-agents/`

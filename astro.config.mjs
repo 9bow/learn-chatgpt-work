@@ -12,7 +12,7 @@ export default defineConfig({
     starlight({
       title: 'ChatGPT Work 학습 사이트',
       description:
-        'ChatGPT Work의 최신 기능을 업무와 일상에 적용하는 방법을 32개 챕터로 배우는 한국어 학습 사이트',
+        'ChatGPT Work의 최신 기능을 업무와 일상에 적용하는 방법을 배우는 한국어 학습 사이트',
       defaultLocale: 'root',
       locales: { root: { label: '한국어', lang: 'ko' } },
       head: [
