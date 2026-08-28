@@ -12,6 +12,12 @@
 }
 
 /* Splash hero: 한국어 타이틀 overflow/줄바꿈 방지 */
+/* 이미지가 없는 Hero는 Starlight의 빈 이미지 열을 만들지 않는다. */
+@media (min-width: 50rem) {
+  .hero:not(:has(> img, > .hero-html)) { grid-template-columns: minmax(0, 1fr); }
+  .hero:not(:has(> img, > .hero-html)) .copy > * { max-width: none; }
+}
+
 .hero h1 {
   font-size: clamp(2rem, 6vw, 4.5rem);
   line-height: 1.1;
