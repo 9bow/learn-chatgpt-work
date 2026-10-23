@@ -14,16 +14,19 @@ estimated_minutes: 32
 references:
   - title: "Enterprise privacy at OpenAI"
     url: "https://openai.com/enterprise-privacy/"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "ChatGPT Work admin FAQ"
     url: "https://learn.chatgpt.com/docs/enterprise/work-admin-faq"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Governance"
     url: "https://learn.chatgpt.com/docs/enterprise/governance"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Plugin controls"
     url: "https://learn.chatgpt.com/docs/enterprise/apps-and-connectors"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
+  - title: "Agent Security"
+    url: "https://learn.chatgpt.com/docs/enterprise/agent-security"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -91,16 +94,18 @@ Enterprise 계열에서 OpenAI 직원의 접근은 **장애 해결, 사용자의
 관리자 FAQ는 접근 통제를 여러 층으로 설명한다. 비개발자가 알아 둘 만한 것은 다음이다.
 
 - **워크스페이스 역할**: 내장 역할은 Owner, Admin, Member이며 누가 워크스페이스를
-  관리할지를 결정한다. 여기에 더해 **커스텀 역할과 구성원 RBAC** 가 별도로 최종 사용자의
-  ChatGPT Work·플러그인 등 기능 접근을 통제한다. 이 둘은 다른 층이다.
-- **그룹 멤버십**: 그룹은 SCIM과 ID 공급자로 동기화할 수 있어, 입사·직무 변경·퇴사에
-  따라 접근이 자동으로 갱신된다.
+  관리할지를 결정한다. 대상 Enterprise·Edu의 **커스텀 역할과 구성원 RBAC**는 기능 접근을
+  통제하는 별도 층이다. Business에는 같은 커스텀 구성원 RBAC가 포함되지 않는다.
+- **그룹 멤버십**: SCIM 지원 플랜에서는 ID 공급자와 그룹을 동기화할 수 있다.
+  Business에는 SCIM과 동기화된 ID 그룹이 포함되지 않는다. ChatGPT 팀의 멤버십도 이 그룹과 별개다.
 - **원본 시스템 권한**: 사용자는 연결된 애플리케이션에서 자기 계정이나 공유 연결이
   허용하는 콘텐츠와 행동에만 접근할 수 있다.
 
 마지막 항목에 대해 문서는 오해를 막는 문장을 따로 둔다. **ChatGPT Work는 기존 접근
-통제를 우회하지 않고, 연결된 시스템에서 새 권한을 부여하지도 않는다.** 즉 내가 볼 수
-없는 문서는 ChatGPT Work도 볼 수 없다. 반대로 내가 볼 수 있는 문서는 볼 수 있다.
+통제를 우회하지 않고, 연결된 시스템에서 새 권한을 부여하지도 않는다.** 다만 비교 대상은
+실제로 인증된 연결 계정이다. 개인 연결은 내 권한을 쓰지만, 승인된 워크스페이스·팀 연결은
+공유 계정의 권한을 쓸 수 있어 내 개인 계정이 못 보는 자료를 읽을 수 있다. 연결을 쓸 사람과
+공유 계정의 원본 접근 범위를 함께 제한한다.
 
 ## 권한은 층으로 쌓인다
 
@@ -139,8 +144,9 @@ Action control을 지원하는 커넥터에서는 관리자가 **모든 행동 �
 
 공식 문서가 명시하는 관리자 제어 범위를 모으면 다음과 같다.
 
-- **ChatGPT Work 접근 자체.** 웹과 모바일에서는 ChatGPT Work 접근 제어와 RBAC로 누가
-  쓸지 정한다. 데스크톱 접근은 별도의 Codex Local 권한과 관리형 설정을 따른다.
+- **ChatGPT Work 접근 자체.** 현재는 **Work Cloud**, **Work Local**, **Codex Local**의
+  별도 권한을 구분한다. Work Cloud의 로컬 컴퓨터 접근은 별도 허용이며 Codex Local을
+  켜는 것이 선행 조건은 아니다. 브라우저와 코드·셸 네트워크 기능도 각각 검토한다.
 - **플러그인, 브라우저 사용, 네트워크 접근.** 공식 문서는 "워크스페이스 관리자가 ChatGPT
   Work, 플러그인, 브라우저 사용, 네트워크 접근에 대한 접근을 제어할 수 있다"고 밝힌다.
 - **스킬(skills).** 스킬 통제가 별도로 존재하며, Academy 문서도 워크스페이스 소유자가
@@ -157,13 +163,15 @@ Action control을 지원하는 커넥터에서는 관리자가 **모든 행동 �
 Sites와 관련해서는 7-1·7-2에서 다룬 대로 Enterprise 워크스페이스에서 관리자가 사용
 가능 여부를 제어하고, 공개 게시는 기본으로 꺼져 있다.
 
-<ConceptCard title="ChatGPT Work의 초기 기본값">
+<ConceptCard title="Agent Security의 범위">
+현재 관리자 콘솔의 **Agent Security**는 과거 Policies &amp; Configuration을 대체한다.
+**Global**은 공통 기준과 작업 조정 단계의 승인·검색 정책, **Local**과 **Codex Cloud**는
+지원되는 실행 설정의 환경별 차이를 다룬다. 필수 요구사항과 시작 기본값은 다르다.
 
-관리자 FAQ에 따르면 ChatGPT Work는 **2026년 7월 9일에 출시** 됐고, Enterprise와 Edu의
-경우 2주간의 프리뷰 기간에 웹·모바일 접근이 기본으로 꺼져 있었다. 관리자가 과금 대상
-사용을 켤 수 있고, 명시적인 옵트아웃은 기본값이 바뀐 뒤에도 유지된다. 데스크톱 접근은
-Codex Local 권한과 관리형 설정으로 따로 관리된다.
-
+Work Cloud의 브라우저·네트워크 접근 권한은 별도로 관리한다. 로컬 파일·네트워크 제한이
+Work의 클라우드 컨테이너나 dot의 클라우드 컴퓨터에 자동으로 그대로 적용되지는 않는다.
+정책 화면 전환과 Work·dot의 로컬 접근 허용도 서로 다른 롤아웃이다. 새 기능을 켜기 전에
+필요한 경계가 실제로 적용되는지 허용·차단 사례로 시험한다.
 </ConceptCard>
 
 ## 무엇이 기록되고 무엇이 기록되지 않나
@@ -174,11 +182,14 @@ Codex Local 권한과 관리형 설정으로 따로 관리된다.
 | 도구 | 무엇을 보여 주나 | 한계 |
 |---|---|---|
 | Global Admin Console과 워크스페이스 분석 | 사용자·제품·모델별 도입과 크레딧 사용. Global Admin Console에서 Chat·Work·Codex 사용을 드릴다운할 수 있다 | 원시 감사 로그가 아니다. 대시보드 라벨로 영구적인 리포팅 계약을 만들지 말라고 문서가 권고한다 |
-| Compliance API | Chat·Work·Codex 전반의 **모든 사용자 메시지와 응답** 을 다룬다 | **파일, 행동, 도구 호출은 추적하지 않는다.** 데이터는 30일 보존된다 |
+| Compliance API | 지원되는 감사·조사 기록. Work Cloud의 로컬 접근은 `conversation_message`·`codex_log` 이벤트를 사용 | 제품·이벤트별 지원 범위가 다르다. 모든 로컬 행동의 완전한 기록이 아니며 스키마·보존은 현재 API 참조에서 확인한다 |
 | Analytics API | 프로그램으로 가져가는 집계 리포팅 | 워크플로별 정확한 비용 귀속으로 쓸 수 없다 |
 
-Compliance Logs Platform의 30일 보존은 실무에서 중요하다. 조직에 더 긴 보존이 필요하면
-승인된 전자증거개시·DLP·SIEM·데이터 레이크 시스템으로 기록을 지속적으로 내보내야 한다.
+[현재 감사 기록 안내](https://learn.chatgpt.com/docs/enterprise/compliance-api)에 따라 로컬 실행의
+OpenTelemetry(OTel) 이벤트는 Compliance API 기록과 별도로 수집한다. 대화가
+보인다는 이유만으로 모든 파일 조작·명령·화면·승인·외부 행동을 감사할 수 있다고 단정하지
+않는다. 현재 API의 지원 이벤트·보존·삭제 조건을 확인하고, 대표 작업의 실제 행동과 내보낸
+기록을 대조한다. 더 긴 보존이 필요하면 승인된 감사 시스템으로 지속 수집한다.
 
 한 가지 더. **데이터 레지던시, 추론 레지던시, FedRAMP, HIPAA, BAA에 대한 커버리지는
 보편적이지 않다.** 관리자 FAQ는 사용 중인 기능과 지역에 대해 현재 안내와 조직의 계약을
@@ -236,9 +247,7 @@ Compliance Logs Platform의 30일 보존은 실무에서 중요하다. 조직에
   ChatGPT Work는 연결된 시스템의 기존 권한을 우회하지 않는다.
 - 관리자는 ChatGPT Work 접근, 플러그인, 브라우저 사용, 네트워크 접근, 스킬, 워크스페이스
   에이전트, 크레딧 한도, 관리형 설정을 제어한다.
-- Compliance API는 사용자 메시지와 응답을 다루지만 파일·행동·도구 호출은 추적하지 않고
-  30일 보존된다. 레지던시와 규제 적합성 커버리지는 보편적이지 않으므로 자기 조직의 설정과
-  계약을 확인해야 한다.
+- Compliance API와 로컬 OTel 기록의 범위는 다르다. 이벤트·보존·레지던시·규제 적합성은 현재 API 참조와 조직 계약에서 확인한다.
 
 다음 챕터에서는 이런 보호 장치가 있어도 남는 마지막 책임, 즉 결과물을 쓰기 전에 스스로
 검증하는 루틴을 만든다.

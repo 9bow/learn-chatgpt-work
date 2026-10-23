@@ -14,16 +14,19 @@ estimated_minutes: 35
 references:
   - title: "Visualizations"
     url: "https://learn.chatgpt.com/docs/visualizations"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Analyzing data with ChatGPT (OpenAI Academy)"
     url: "https://openai.com/academy/data-analysis/"
     accessed: "2026-08-04"
   - title: "Work with files"
     url: "https://learn.chatgpt.com/docs/artifacts-viewer"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "ChatGPT Work 제품 페이지"
     url: "https://openai.com/chatgpt-work/"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
+  - title: "Pages in ChatGPT Space"
+    url: "https://learn.chatgpt.com/docs/space/pages"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -78,7 +81,8 @@ tools"이며, 선택하면 입력창에 Visualize 태그가 붙는다. `@Visuali
 
 이 구분이 중요한 이유는 마지막 항목 때문이다. 시각화는 **ChatGPT가 그것을 만든 시점에
 있던 정보의 스냅샷**이며, 연결된 원본과 계속 동기화되는 라이브 대시보드가 아니다. 계속
-갱신되고 여러 사람이 접근해야 하는 결과물이 필요하면 Sites로 만들어야 한다.
+갱신되고 여러 사람이 접근해야 하는 호스팅 결과물이 필요하면 Sites를 검토하되,
+7-2의 연결 데이터·권한·새로고침 조건을 함께 설계한다.
 
 강한 요청에는 **산출물, 원본 자료, 답해야 할 질문, 유용한 상호작용**이 들어간다. 공식
 예시를 옮기면 이렇다.
@@ -91,6 +95,13 @@ tools"이며, 선택하면 입력창에 Visualize 태그가 붙는다. `@Visuali
 
 어떤 정보를 쓸지도 알려 준다. 대화에 이미 있는 내용, 붙여 넣은 데이터, 첨부한 파일,
 연결된 원본 중 무엇인지 명시한다. 복잡한 요청이라면 추론 강도를 높이는 편이 좋다.
+
+### Space의 페이지에 시각화를 넣기
+
+Space가 활성화된 계정에서는 페이지를 편집하면서 `/visualize`와 요청을 입력하고 제안 메뉴를
+선택해 페이지 안에 상호작용 설명을 넣을 수 있다. 노트·리서치·계획과 나란히 설명을 둘 때
+유용하다. 대화의 `@Visualize`와 페이지 안의 `/visualize`는 서로 다른 진입점이다.
+페이지를 공유하기 전에도 데이터·권한·키보드 조작과 수치를 검토한다.
 
 ## 데이터 분석을 요청하는 5단계
 

@@ -13,19 +13,19 @@ estimated_minutes: 30
 references:
   - title: "Get started with ChatGPT Work"
     url: "https://learn.chatgpt.com/docs/get-started-with-work"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "ChatGPT desktop app"
     url: "https://learn.chatgpt.com/docs/app"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "ChatGPT on the web"
     url: "https://learn.chatgpt.com/docs/web"
-    accessed: "2026-08-04"
-  - title: "Use ChatGPT"
-    url: "https://learn.chatgpt.com/docs/use-chatgpt"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
+  - title: "Local computer access with Work Cloud"
+    url: "https://learn.chatgpt.com/docs/enterprise/cloud-local-access"
+    accessed: "2026-10-23"
   - title: "What's new"
     url: "https://learn.chatgpt.com/docs/whats-new"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -90,8 +90,19 @@ Plus·Pro·Business·Enterprise·Edu다.
 | 실행 위치 | 내 컴퓨터 | 격리된 호스팅 환경 |
 | 쓸 수 있는 것 | 내 컴퓨터의 파일, 앱, 브라우저 | 업로드한 파일, 연결된 도구, 승인된 웹사이트 |
 | 앱을 닫으면 | 작업이 함께 멈춘다 | 계속 진행된다 |
-| 다른 기기에서 | 그 컴퓨터에 남는다 | 웹·모바일에서 이어받을 수 있다 |
+| 다른 기기에서 | 로컬 전용 대화는 그 컴퓨터에 남는다 | 웹·모바일에서 이어받을 수 있다 |
 | 가용성 | 계정 또는 워크스페이스에서 활성화된 경우 | 선택지로 표시될 때 |
+
+**Work Cloud의 로컬 컴퓨터 접근(Local computer access with Work Cloud)**이 활성화된 경우는
+위의 로컬 전용 실행과 구분한다. 새로 시작한 해당 대화는 클라우드에서 조정되므로 데스크톱에서
+승인된 로컬 자료로 작업을 시작하고 웹·모바일에서 결과를 보거나 지시를 보낼 수 있다.
+로컬 파일·도구가 필요한 단계에는 컴퓨터가 온라인이고 앱이 열려 있어야 한다.
+
+기능을 켜기 전의 기존 대화와 프로젝트 대화가 자동으로 전환되지는 않는다. 컴퓨터를 사용할 수
+없을 때는 다음 턴 시작 시 클라우드 컨테이너에서 이어갈 수 있지만 로컬 파일·도구는 쓸 수 없다.
+진행 중인 턴 도중에 로컬 실행을 클라우드 실행으로 옮기지는 못한다. Enterprise에서는 출시 시
+Local/Cloud 전환기와 기본값이 유지되므로 토글 모양만 보고 동기화 여부를 판단하지 않는다.
+관리자는 Work Cloud 접근·로컬 접근·실행 정책을 각각 확인해야 한다.
 
 고르는 기준은 단순하다.
 

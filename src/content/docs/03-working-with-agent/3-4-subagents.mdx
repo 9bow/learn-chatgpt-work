@@ -14,16 +14,16 @@ estimated_minutes: 30
 references:
   - title: "Subagents"
     url: "https://learn.chatgpt.com/docs/agent-configuration/subagents"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Projects and chats"
     url: "https://learn.chatgpt.com/docs/projects"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Long-running work"
     url: "https://learn.chatgpt.com/docs/long-running-work"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "What's new"
     url: "https://learn.chatgpt.com/docs/whats-new"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -52,7 +52,7 @@ import Quiz from '../../../components/learning/Quiz.tsx';
 | 서브에이전트(subagent) | 특정 일을 맡기려고 시작된 위임 에이전트 하나 |
 | 에이전트 스레드(agent thread) | 서브에이전트가 일하는 갈래. 지원되는 화면에서 열어 진행과 결과를 볼 수 있다 |
 
-ChatGPT Work에서는 독립적인 일을 서브에이전트에게 위임해 달라고 요청한다. 에이전트는
+**웹의 ChatGPT Work**에서는 독립적인 일을 서브에이전트에게 위임해 달라고 요청한다. 에이전트는
 ChatGPT의 호스팅 환경에서 돌아가고, 대화에 그 활동과 결과가 표시된다. 대부분의 지능
 수준(intelligence level)에서는 **명시적으로 위임을 요청**해야 한다. Ultra에서는 병렬
 에이전트가 속도나 품질을 실질적으로 개선할 때 ChatGPT가 알아서 위임할 수 있다. Ultra는
@@ -134,11 +134,14 @@ ChatGPT Work 웹에서는 **Subagents** 항목을 열어 **Active**와 **Done** 
 ChatGPT에게 직접 요청해 멈추거나 조종할 수 있다.
 
 <ConceptCard title="권한은 어떻게 적용되나">
-ChatGPT Work는 서브에이전트를 자체 호스팅 환경에서 돌리고, 로컬 샌드박스나 승인 모드 제어를
+웹의 ChatGPT Work는 서브에이전트를 자체 호스팅 환경에서 돌리고, 로컬 샌드박스나 승인 모드 제어를
 노출하지 않는다. 서브에이전트는 **부모 대화가 쓸 수 있는 도구**를 사용한다. 웹사이트와
 커넥터 권한은 도구별로 그대로 유지된다. 즉 위임한다고 접근 범위가 넓어지지 않는다.
 데스크톱 앱에서는 서브에이전트가 컴포저 아래에서 선택한 권한 모드를 물려받으므로, 위임을
-요청하기 전에 부모 턴의 권한 모드를 먼저 정한다.
+요청하기 전에 부모 턴의 권한 모드를 먼저 정한다. 현재 로컬 Codex는 직접 요청이나 적용되는
+프로젝트·스킬 지침이 있을 때 위임한다. 웹 Ultra의 자동 위임 안내를 로컬의 보편적인 기본값으로
+옮기지 않는다. 역할 지침에 “읽기만 하라”고 적는 것만으로 별도의 읽기 전용 샌드박스가 생기지는
+않으므로, 부모 세션의 실제 권한도 확인한다.
 </ConceptCard>
 
 ## 해보기

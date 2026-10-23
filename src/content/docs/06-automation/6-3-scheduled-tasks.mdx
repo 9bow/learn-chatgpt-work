@@ -14,16 +14,16 @@ estimated_minutes: 30
 references:
   - title: "Scheduled tasks"
     url: "https://learn.chatgpt.com/docs/automations"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Get started with ChatGPT Work"
     url: "https://learn.chatgpt.com/docs/get-started-with-work"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Glossary"
     url: "https://learn.chatgpt.com/docs/glossary"
     accessed: "2026-08-04"
   - title: "What's new"
     url: "https://learn.chatgpt.com/docs/whats-new"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -59,8 +59,8 @@ import ConceptCard from '../../../components/learning/ConceptCard.astro';
 실무에서 가장 중요하다.
 
 **독립 예약 작업(standalone scheduled task)** 은 실행마다 **새 대화를 시작**하고
-결과를 예약 목록에 보고한다. 용어집은 이 유형의 결과가 **Triage** 에 보고된다고
-설명한다. 각 실행이 서로 독립적이어야 할 때, 또는 하나의 예약 작업이 여러
+결과를 **Scheduled**의 실행 기록에 보고한다. 과거 자료의 Triage 표기와 현재 UI를
+혼동하지 않는다. 각 실행이 서로 독립적이어야 할 때, 또는 하나의 예약 작업이 여러
 프로젝트를 걸쳐 돌아야 할 때 쓴다.
 
 **대화 안 예약 작업(scheduled task in a chat)** 은 기존 대화의 맥락을 그대로 쓰고,
@@ -166,6 +166,25 @@ import ConceptCard from '../../../components/learning/ConceptCard.astro';
 마지막 두 줄이 이 프롬프트의 핵심이다. **보고할 것이 있는지 판단하는 기준**을
 넣지 않으면, 매일 "특별한 변화 없습니다"라는 알림이 쌓여서 곧 아무도 읽지 않게 된다.
 
+### Gmail·Slack·GitHub 이벤트로 시작하기
+
+대상 플랜에서는 웹·모바일의 예약 작업을 지원되는 앱 이벤트로 시작할 수 있다. 데스크톱 앱·
+CLI·IDE에는 이 이벤트 트리거가 제공되지 않는다. **한 작업에 여러 이벤트 트리거**를 둘 수
+있지만 **시간 일정과 이벤트를 같은 작업에 섞을 수는 없다.**
+
+Gmail은 새 수신 메시지, Slack은 선택한 채널의 새 메시지, GitHub는 저장소의 PR 활동을
+조건으로 쓴다. Slack의 반응·수정·삭제·DM은 지원되지 않으며 감시할 채널마다 `@ChatGPT`를
+추가해야 한다. 앱을 먼저 연결하고 권한을 승인한다. GitHub 앱에는 대상 저장소 접근이 필요하다.
+짧은 시간에 여러 이벤트가 오면 한 실행으로 묶일 수 있다. 관리자는 이벤트 예약 작업 허용
+권한을 제어할 수 있으므로 기존 일정 예약이 된다고 이벤트도 된다고 가정하지 않는다.
+
+```text
+@Gmail 에 [발신자]가 보낸 새 메일이 도착하면 [프로젝트명] 관련 요청만 분류해 주세요.
+이벤트 트리거로 만들고 시간 일정은 함께 넣지 마세요.
+요청·기한·확인할 질문을 이 작업의 결과로 남기고 답장은 발송하지 마세요.
+연결 권한과 조건을 보여 주고, 첫 실행을 검토할 수 있게 해 주세요.
+```
+
 ## 예약 작업과 스킬을 함께 쓰기
 
 예약 작업을 유지 관리하고 팀과 공유하기 쉽게 만드는 공식 권고는 **스킬로 동작을
@@ -210,9 +229,9 @@ import ConceptCard from '../../../components/learning/ConceptCard.astro';
 - **알림 피로를 설계로 막으세요.** "보고할 것이 있는지 판단하는 기준"과 "없으면
   한 줄로 끝내라"를 프롬프트에 넣는다.
 - **실행 기록은 쌓인다.** 일괄 동작으로 정리하고, 필요 없는 실행은 보관한다.
-- **모델 은퇴 일정을 확인하세요.** 공식 문서는 ChatGPT 로그인으로 `gpt-5.4` 또는
-  `gpt-5.4-mini` 를 쓰는 예약 작업은 2026년 8월 31일 은퇴 전에 갱신하라고 안내한다.
-  `gpt-5.4` 는 `gpt-5.6-terra` 로, `gpt-5.4-mini` 는 `gpt-5.6-luna` 로 바꾼다.
+- **은퇴한 모델을 정리하세요.** ChatGPT 로그인 방식 Codex의 GPT-5.5는 10월 14일,
+  GPT-5.4·mini는 8월 31일 은퇴했다. 예약 설정에서 계정에 제공되는 모델로 바꾸고 대표 실행을
+  검토한다. GPT-5.5 대안은 대상 유료 플랜의 GPT-6.1 Sol, Free·Go 데스크톱의 GPT-6 Luna다.
 - **가용성이 다르다.** 기능은 플랜·플랫폼·지역·롤아웃·워크스페이스 설정에 따라
   다르다. 예약 관리 화면은 웹과 데스크톱 앱에서 제공되며, Codex CLI와 IDE 확장에는
   없다. 워크스페이스에서 예약 작업이 켜져 있어야 만들 수 있다.

@@ -1,6 +1,6 @@
 # AGENTS.md
 
-한국어 학습 사이트(Astro 6 + Starlight + React 19). 콘텐츠 수정 전에 반드시 읽을 문서:
+한국어 학습 사이트(Astro 7 + Starlight + React 19). 콘텐츠 수정 전에 반드시 읽을 문서:
 
 - [`docs/authoring-guide.md`](docs/authoring-guide.md) — 챕터 작성 규칙(frontmatter 스키마,
   사실 정확성 규칙, 시각 자료 요건, 참고 URL 화이트리스트, MDX 함정)

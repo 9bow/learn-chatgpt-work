@@ -14,19 +14,19 @@ estimated_minutes: 28
 references:
   - title: "Prompting"
     url: "https://learn.chatgpt.com/docs/prompting"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Projects"
     url: "https://learn.chatgpt.com/docs/projects"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Scheduled tasks"
     url: "https://learn.chatgpt.com/docs/automations"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Sites"
     url: "https://learn.chatgpt.com/docs/sites"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Memories"
     url: "https://learn.chatgpt.com/docs/customization/memories"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -104,13 +104,15 @@ import ConceptCard from '../../../components/learning/ConceptCard.astro';
 - 새 사이트는 접근을 바꾸기 전까지 **소유자와 워크스페이스 관리자에게만** 열려 있다.
   가족이나 친구에게 보여 주려면 공유 범위를 의도적으로 넓혀야 하고, 공개 게시가
   허용돼 있는지도 확인해야 한다.
-- 사이트는 **라이브 데이터에 직접 연결되지 않는다.** 내용이 자주 바뀐다면 예약 작업으로
-  갱신 초안을 만들고, 검토한 뒤 사이트를 갱신한다.
+- 워크스페이스 비공개 사이트는 지원되는 플러그인으로 방문자별 연결 데이터를 읽을 수 있다.
+  가족·친구에게 공개하거나 외부 초대한 개인 사이트에 이 조건을 그대로 적용하지 않는다.
+  지원되지 않는 자료는 예약 작업으로 갱신 초안을 만들고 검토 후 반영한다.
 
 개인정보를 수집하거나 처리하는 페이지라면 관련 개인정보·데이터 보호 법령을 준수해야
 한다. 그리고 문서에 명시된 금지 용도가 있다. **보호 대상 건강정보나 결제카드 데이터
-처리, 13세 미만(또는 해당 지역의 디지털 동의 연령 미만) 대상, 금융 거래 처리** 는 Sites로
-하지 않는다. 가족 행사 페이지에 참석자 연락처나 아이들의 정보를 모으는 폼을 넣는 일은
+처리, 13세 미만(또는 해당 지역의 디지털 동의 연령 미만) 대상**은 Sites로 하지 않는다.
+제3자 처리업체를 통한 상품·서비스 결제는 현재 조건에 따라 허용되지만 카드 데이터는 해당
+업체만 처리해야 한다. 그 밖의 금융 거래는 금지된다. 가족 행사 페이지에 참석자 연락처나 아이들의 정보를 모으는 폼을 넣는 일은
 특히 신중해야 한다.
 
 ## 정기 리마인더 만들기
@@ -211,7 +213,7 @@ Business·Enterprise·Healthcare·Edu·for Teachers와 API Platform의 입력과
   사람이 열어 보면 Sites다.
 - 파일은 요약·비교, 패턴과 불일치 찾기, 추출과 재구성, 새 파일의 원자료로 쓴다. 결과 파일은
   열어서 확인한 뒤 수정을 요청한다.
-- Sites로 개인 페이지를 만들 수 있지만 베타 한도, 기본 접근 범위, 라이브 데이터 미연결,
+- Sites로 개인 페이지를 만들 수 있지만 제공 조건, 기본 접근 범위, 연결 데이터 조건,
   금지 용도를 함께 기억한다.
 - 개인 용도와 회사 워크스페이스를 섞지 않는다. 비밀 값을 넣지 않고, 다른 사람의 정보에는
   동의를 받고, 필요한 만큼만 올린다. 기능 노출은 플랜·플랫폼·지역·롤아웃·워크스페이스

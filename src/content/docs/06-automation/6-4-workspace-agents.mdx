@@ -14,13 +14,16 @@ estimated_minutes: 35
 references:
   - title: "Workspace agents (OpenAI Academy)"
     url: "https://openai.com/academy/workspace-agents/"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Introducing workspace agents in ChatGPT"
     url: "https://openai.com/index/introducing-workspace-agents-in-chatgpt/"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Scale your team with workspace agents"
     url: "https://openai.com/business/workspace-agents/"
     accessed: "2026-08-04"
+  - title: "Teams and Team Tasks"
+    url: "https://learn.chatgpt.com/docs/enterprise/teams"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -265,19 +268,28 @@ ChatGPT Enterprise와 Edu 관리자는 사용자 그룹이 접근할 수 있는 
 돕는 내장 안전장치도 있다. Compliance API는 모든 에이전트의 구성·업데이트·실행에
 대한 가시성을 제공하며, 관리자는 필요하면 에이전트를 정지시킬 수 있다.
 
-<ConceptCard title="가용성: 리서치 프리뷰이고 플랜 제약이 있다">
-워크스페이스 에이전트는 **ChatGPT Business, Enterprise, Edu, Teachers 플랜에서
-리서치 프리뷰**로 제공된다. Enterprise와 Edu 플랜에서는 관리자가 역할 기반 통제로
-에이전트 접근을 켤 수 있다. ChatGPT Enterprise에서 에이전트를 만들 수 있는 권한 자체가
-워크스페이스 관리자의 통제 아래 있다.
-
-발표 시점(2026년 4월 22일) 기준으로 워크스페이스 에이전트는 2026년 5월 6일까지
-무료였고, 그 날짜부터 크레딧 기반 과금이 시작됐다. 기능은 플랜·플랫폼·지역·
-롤아웃·워크스페이스 설정에 따라 다르므로 현재 조건은 관리자에게 확인하세요.
-
-또한 워크스페이스 에이전트는 **GPT의 발전형**으로 소개됐다. 팀이 워크플로로
-테스트하는 동안 GPT는 계속 제공된다고 안내돼 있다.
+<ConceptCard title="현재 제공 상태와 과거 발표를 구분한다">
+2026년 10월 23일 확인한 발표 페이지의 상단 갱신 안내는 **Business·Enterprise·Edu의
+일반 제공**을 명시한다. 같은 페이지 본문에는 4월 출시 당시의 Teachers 포함 리서치 프리뷰와
+5월 6일 과금 시작 안내가 남아 있다. 이 역사적 문구를 현재의 플랜·가격표로 옮기지 않는다.
+실제 기능과 사용량은 현재 계정·워크스페이스 안내를 확인한다. Enterprise·Edu의 역할 기반
+제어와 조직 정책을 따르며, 플랜·플랫폼·지역·롤아웃에 따라 노출이 다를 수 있다.
 </ConceptCard>
+
+### 팀 소유 예약 작업은 Team Tasks도 확인한다
+
+**Team Tasks**는 팀의 서비스 계정과 설정된 앱 연결로 클라우드에서 실행하는 일정·이벤트
+작업이다. 개인 예약을 여러 사람이 보는 것과 다르다. 관리자는 팀 생성과 팀 작업 생성·관리
+권한을 나누고, 팀 소유자는 허용된 연결의 실제 계정·데이터·동작 범위를 검토한다.
+
+작업은 만든 사람의 개인 메모리·커스텀 지침·대화 기록을 상속하지 않는다. 필요한 업무 지침과
+출처를 작업에 넣고 **Run now**로 시험한다. 새 팀원은 이전 실행과 생성 파일을 볼 수 있고,
+개별 작업·실행별로 별도 접근을 제한할 수 없으므로 초대 전에 기록을 검토한다.
+
+팀 연결은 개인 계정이 볼 수 없는 정보에 접근할 수 있다. 업무 담당자가 나가도 팀 소유 작업은
+유지되도록 설계됐지만 연결이 끊길 수 있으므로 소유권·연결을 함께 인계한다. 작업 일시정지는
+미래 실행을 막는 것이며 이미 실행 중인 작업을 중단한다고 가정하지 않는다. 팀 작업의 한도와
+사용자 개인 한도도 별개다.
 
 ## 주의점
 

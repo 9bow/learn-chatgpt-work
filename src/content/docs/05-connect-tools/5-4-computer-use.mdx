@@ -14,16 +14,16 @@ estimated_minutes: 35
 references:
   - title: "Computer Use"
     url: "https://learn.chatgpt.com/docs/computer-use"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Appshots"
     url: "https://learn.chatgpt.com/docs/appshots"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "What's new"
     url: "https://learn.chatgpt.com/docs/whats-new"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "Browser"
     url: "https://learn.chatgpt.com/docs/browser"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -69,7 +69,7 @@ Computer Use는 강력하지만 가장 먼저 꺼낼 도구는 아니다. 같은
 |---|---|---|
 | 플러그인·커넥터 | 구조화된 데이터 읽기와 동작 실행 | 지원되는 서비스만 가능 |
 | 내장 브라우저 | 웹 페이지 열기·클릭·검증, 주석 | 웹 화면에 한정. 파일 업로드 자동화 불가 |
-| Appshots | 앞에 있는 창의 이미지와 텍스트 전달 | 읽기 전용. macOS 전용 |
+| Appshots | 앞에 있는 창의 이미지와 텍스트 전달 | macOS·Windows 데스크톱에서 생성. 조작 권한과 별개 |
 | Computer Use | 데스크톱 앱을 보고 직접 조작 | 시스템 권한 필요. 앱·시스템 상태를 바꿈 |
 
 ## 설치와 권한
@@ -171,15 +171,15 @@ Computer Use 턴 동안 ChatGPT에만 허용되며, 일시적으로 잠금이 �
 디자인 시안, 캘린더 화면처럼 말로 설명하기보다 보여 주는 게 빠른 것들이다.
 Appshots는 이럴 때 쓴다.
 
-- macOS의 ChatGPT 데스크톱 앱에서 제공되며, **양쪽 Command 키를 동시에** 누르거나
-  직접 지정한 Appshots 단축키를 누르면 찍힌다.
+- macOS와 Windows의 ChatGPT 데스크톱 앱에서 제공된다. macOS는 **양쪽 Command**,
+  Windows는 **양쪽 Alt**를 동시에 누르거나 직접 지정한 Appshots 단축키를 쓴다.
 - 캡처 대상은 **가장 앞에 있는 창 하나**다. 보이는 창의 이미지와, 그 창에서 얻을
   수 있는 텍스트(스크롤 밖의 텍스트를 앱이 제공하는 경우 포함)가 함께 들어간다.
 - 대화에 추가되면 첨부 파일처럼 동작한다. 세션 파일에 로컬로 저장된다.
 - 기본적으로 새 대화가 시작되지만, 최근 60초 안에 어떤 대화와 상호작용했다면
   그 대화에 붙는다. 연속으로 찍으면 같은 대화에 모인다.
 
-권한은 **Screen & System Audio Recording** (창 이미지 캡처)과 **Accessibility**
+macOS 권한은 **Screen & System Audio Recording** (창 이미지 캡처)과 **Accessibility**
 (창의 텍스트 읽기)다. Computer Use와 뿌리가 같은 권한이다.
 
 한 가지 알려진 한계가 있다. Google Docs, Gmail, Google Sheets, Google Slides

@@ -16,6 +16,7 @@
     → OpenAI Academy·발표 페이지 사본
   - `.../scratchpad/chatgpt-work-raw.md` → `openai.com/chatgpt-work/` 제품 페이지 전문
 - 이미지 인벤토리: `docs/image-inventory.md`
+- 최신 공식 출처 검토와 반영 범위: `docs/source-review-2026-10.md`
 
 **중요: 사실은 반드시 위 1차 자료에서 확인한 것만 쓴다.** 자료에 없는 기능·수치·화면을
 추측해서 쓰지 않는다. 자료가 부족하면 그 주제는 짧게 쓰고, 대신 자료에 있는 내용을 깊게 쓴다.
@@ -37,7 +38,7 @@
 1. **검증 불가능한 통계 금지.** 출처 없는 수치("생산성 40% 향상")는 절대 쓰지 않는다.
    1차 자료에 있는 수치(예: "플러그인 1,400개 이상", "Terra 20% 인하, Luna 80% 인하")만 쓰고
    출처를 남긴다.
-2. **날짜는 자료에 명시된 것만.** 이 사이트의 기준 시점은 **2026년 8월 초**다.
+2. **날짜는 자료에 명시된 것만.** 이 사이트의 최신 사실 확인일은 **2026년 10월 23일**이다. 과거 발표·화면은 당시 자료로 구분한다.
    기능 출시 시점을 쓸 때는 `whats-new.md`의 주차 표기를 근거로 쓴다.
 3. **가용성 문구를 반드시 붙인다.** 기능은 플랜·플랫폼·지역·워크스페이스 설정·롤아웃에 따라
    다르다. 챕터마다 최소 1회 이 취지를 밝힌다(공식 문서의 상투 문구:
@@ -93,7 +94,11 @@ references:
   `customization/memories`, `customization/computer-history`, `agent-configuration/subagents`,
   `build-skills`, `extend/mcp`, `enterprise/work-admin-faq`, `enterprise/governance`,
   `enterprise/apps-and-connectors`, `features/codex-micro`, `extend/record-and-replay`,
-  `remote-connections`, `webmcp`, `import`, `changelog`
+  `remote-connections`, `webmcp`, `import`, `changelog`, `agent-configuration/speed`,
+  `sandboxing/auto-review`, `build-plugins`, `migrate-custom-gpts`, `dots`, `space/getting-started`, `space/pages`,
+  `sites/creating-a-site`, `sites/data-and-connections`, `sites/publishing-and-sharing`,
+  `sites/managing-a-site`, `enterprise/cloud-local-access`, `enterprise/agent-security`,
+  `enterprise/shared-connections`, `enterprise/teams`, `enterprise/compliance-api`
 - `https://openai.com/chatgpt-work/`
 - `https://openai.com/business/`, `https://openai.com/business/pricing`,
   `https://openai.com/business/apps/`, `https://openai.com/business/workspace-agents/`

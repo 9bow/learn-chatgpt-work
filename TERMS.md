@@ -24,3 +24,15 @@
 | reasoning effort | 추론 수준 | 작업에 사용할 모델의 추론 강도 설정 | [Models](https://learn.chatgpt.com/docs/models) |
 | approval policy | 승인 정책 | 위험하거나 외부 상태를 바꾸는 동작에 적용하는 승인 규칙 | [Permission modes](https://learn.chatgpt.com/docs/permission-modes) |
 | RBAC | 역할 기반 접근 제어(RBAC) | 역할에 따라 기능과 관리 권한을 나누는 접근 제어 방식 | [Work admin FAQ](https://learn.chatgpt.com/docs/enterprise/work-admin-faq) |
+
+2026-10-23 공식 문서 검토에서 추가한 제품 용어:
+
+| 용어 | 권장 표기 | 이 사이트에서의 뜻 | 근거 |
+|---|---|---|---|
+| Space | Space | Pages·슬라이드 등 저장된 결과물을 편집하고 공유하는 공간 | [Space](https://learn.chatgpt.com/docs/space/getting-started) |
+| Page | 페이지(Page) | Space에서 직접 편집·공유하는 문서 | [Pages](https://learn.chatgpt.com/docs/space/pages) |
+| dot | dot | 대화 사이에도 맡긴 일을 이어가는 클라우드 에이전트 | [Dots](https://learn.chatgpt.com/docs/dots) |
+| Team Task | 팀 작업(Team Task) | 팀 서비스 계정과 승인된 연결로 실행하는 일정·이벤트 작업 | [Team Tasks](https://learn.chatgpt.com/docs/enterprise/teams) |
+| workspace connection | 워크스페이스 연결 | 조직이 관리하는 앱 계정을 사용하도록 허용하는 연결 | [Workspace connections](https://learn.chatgpt.com/docs/enterprise/shared-connections) |
+| Agent Security | Agent Security | 작업 조정과 실행 환경의 정책을 관리하는 관리자 화면 | [Agent Security](https://learn.chatgpt.com/docs/enterprise/agent-security) |
+| Ultrafast | Ultrafast | 지원 모델의 출력 속도를 높이는 별도 사용량 설정 | [Speed](https://learn.chatgpt.com/docs/agent-configuration/speed) |

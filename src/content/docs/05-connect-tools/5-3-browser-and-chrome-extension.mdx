@@ -14,16 +14,16 @@ estimated_minutes: 35
 references:
   - title: "Browser"
     url: "https://learn.chatgpt.com/docs/browser"
-    accessed: "2026-08-28"
+    accessed: "2026-10-23"
   - title: "Chrome extension"
     url: "https://learn.chatgpt.com/docs/chrome-extension"
-    accessed: "2026-08-28"
+    accessed: "2026-10-23"
   - title: "What's new"
     url: "https://learn.chatgpt.com/docs/whats-new"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
   - title: "ChatGPT Work"
     url: "https://openai.com/chatgpt-work/"
-    accessed: "2026-08-04"
+    accessed: "2026-10-23"
 ---
 
 import DocImage from '../../../components/learning/DocImage.astro';
@@ -218,8 +218,11 @@ Gmail, 사내 도구처럼 **이미 로그인해 둔 사이트**를 읽거나 �
 쓴다. 내 기기의 브라우저와 분리돼 돌아가므로, 내 열린 탭이나 개인 브라우저 기록을
 넘기지 않고 웹 작업을 맡길 수 있다. 다만 제약이 있다.
 
-- 공개된, 로그아웃 상태의 웹사이트만 지원한다. 계정에 로그인하거나 자격 증명을
-  요구하거나 내 브라우저의 로그인 세션을 쓸 수 없다.
+- Plus·Pro의 대상 계정에서는 웹·모바일에서 계정이 필요한 사이트에도 로그인할 수 있다.
+  Work가 멈추면 제공된 **보안 로그인 양식**이나 클라우드 브라우저의 직접 로그인 흐름을 쓴다.
+  비밀번호·인증번호를 대화에 보내지 않는다. Enterprise·Edu에는 웹사이트 로그인이 제공되지 않는다.
+- 클라우드의 로그인 세션은 다음 작업에도 유지될 수 있다. **Settings > Cloud browser > Browser data**에서
+  지우면 해당 사이트에서 로그아웃된다. 내 개인 브라우저의 로그인 세션을 가져오는 기능은 아니다.
 - 자동화된 브라우저를 막거나 CAPTCHA를 요구하는 사이트에서는 작업을 끝내지 못할 수 있다.
 - 내 열린 탭, 확장, 저장된 비밀번호, 로컬 브라우저 기록을 쓸 수 없다.
 - 가용성은 플랜·워크스페이스 설정·롤아웃에 따라 다르다. Free와 Go를 제외한 유료
@@ -263,8 +266,8 @@ Chrome DevTools Protocol(CDP) 접근을 통제된 범위로 허용한다. JavaSc
 - 내장 브라우저는 전용 프로필로 페이지를 함께 보고 주석을 남기는 데 쓴다.
 - Chrome 확장은 이미 로그인된 내 Chrome을 써야 할 때 쓴다. 백그라운드 병렬 탭 작업이 된다.
 - 주소창에서 방문 기록 검색과 Google 검색이 되고, 기록 접근은 매번 승인이 필요하다.
-- 사이트 승인은 네 단계로 고르고, 민감한 동작은 별도로 다시 확인한다.
-- 웹에서는 로그아웃 상태의 공개 사이트만 다루는 클라우드 브라우저가 쓰인다.
+- 데스크톱 사이트 승인과 클라우드 사이트 접근 설정은 구분한다. 클라우드 로그인 후에도 영향이 큰 동작은 확인한다.
+- 웹·모바일은 클라우드 브라우저를 쓴다. 로그인은 대상 Plus·Pro 계정에서 지원되며 개인 브라우저 세션과 분리된다.
 
 브라우저 밖의 데스크톱 앱, 예를 들어 사내 전용 클라이언트 프로그램은 어떻게 할까.
 다음 챕터에서 Computer Use를 다룬다.
